@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="500dp"
+    android:height="200dp"
+    android:viewportHeight="200"
+    android:viewportWidth="320">
+
+    <path
+        android:name="rect"
+        android:strokeColor="@color/colorGreen"
+        android:strokeLineCap="round"
+        android:strokeWidth="5"
+        android:pathData="
+        M 70,100
+        L 70,100
+        L 100,100
+        A 8,12,0,1,1,100,105
+        L 100,100
+        L 200,100
+        A 8,12,0,1,1,200,105
+         L 200,100
+         L 280,100
+         Q 300,60,255,60
+         L 230,15
+         Q 220,0,110,0
+         Q 98,0,70,50
+         L 50,60
+ Q 40,98,70,100
+
+
+        "/>
+    <path
+        android:name="smarttrip"
+        android:pathData="
+        M 105,30
+        L 95,30
+        L 95,50
+        L 110,50
+        L 110,30
+        L 115,30
+        L 115,50
+        L 115,30
+        L 120,30
+        L 120,50
+        L 126,50
+        L 129,30
+        L 131,30
+        L 134,50
+        L 140,50
+        L 140,30
+        L 145,30
+        A 2.5,2,90,1,1,140,50
+        L 160,50
+        L 160,30
+        L 152,30
+        L 168,30
+        L 160,30
+        L 160,50
+        L 180,50
+
+         L 180,30
+        L 172,30
+        L 188,30
+        L 180,30
+        L 180,50
+        L 192,50
+        L 192,30
+        L 200,30
+        A 3,1.5,90,1,1,200,50
+        L 195,50
+        L 212,50
+        L 212,27
+        L 212,50
+        L 219,50
+        L 219,30
+        L 224,30
+        A 3,2.5,90,1,1,224,50
+        L 219,50
+        L 219,70
+        L 219,50
+        L 212,50
+        L 212,70
+ L 212,50
+ L 192,50
+ L 205,70
+ L 192,50
+ L 192,70
+ L 192,50
+ L 180,50
+ L 180,70
+ L 180,50
+ L 160,50
+ L 160,70
+ L 160,50
+ L 140,50
+ L 150,70
+ L 140,50
+ L 140,70
+ L 140,50
+ L 134,50
+ L 137,70
+  L 134,50
+   L 126,50
+   L 123,70
+    L 126,50
+     L 120,50
+     L 120,70
+      L 120,30
+      L 115,30
+      L 115,70
+ L 115,30
+  L 110,30
+  L 110,70
+  L 110,50
+  L 105,50
+  L 105,70
+  L 95,70
+
+"
+        android:strokeColor="@color/colorGreen"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+</vector>

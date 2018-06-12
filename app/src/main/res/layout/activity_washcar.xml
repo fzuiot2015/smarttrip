@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:title="汽车美容"
+        app:titleTextColor="@color/colorWrite" >
+
+        <LinearLayout
+            android:id="@+id/ll_washcar_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离选择" />
+
+            <ImageView
+                android:id="@+id/iv_search_nearbypoi_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/down_login" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.weavey.loading.lib.LoadingLayout
+        android:id="@+id/loadinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh_washcar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:id="@+id/header_parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlClassicsSpinnerStyle="FixedBehind"
+                    app:srlDrawableArrowSize="20dp"
+                    app:srlDrawableMarginRight="20dp"
+                    app:srlDrawableProgress="@drawable/main_refreshed_icon"
+                    app:srlDrawableProgressSize="20dp"
+                    app:srlEnableLastTime="true"
+                    app:srlFinishDuration="500"
+                    app:srlPrimaryColor="@color/colorGreen"
+                    app:srlTextSizeTime="10dp"
+                    app:srlTextSizeTitle="16sp"
+                    app:srlTextTimeMarginTop="2dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGray">
+
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#88000000"/>-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlv_washcar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <TextView
+                android:id="@+id/tv_washcar_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:text="该范围内查找无结果"
+                android:textColor="@color/colorGrays"
+                android:textSize="24sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.weavey.loading.lib.LoadingLayout>
+</LinearLayout>

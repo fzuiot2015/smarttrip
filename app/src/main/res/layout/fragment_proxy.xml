@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGreen"
+    app:navigationIcon="@drawable/ic_arrow_back_white"
+    app:title="设置代理"
+    app:titleTextColor="@color/colorWrite"/>
+
+    <TextView
+        android:text="设置IP地址"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_ip"
+        android:layout_margin="10dp"
+        android:hint="请输入IP地址"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_ip"
+        android:text="修            改"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorWrite"
+        android:background="@drawable/selector_btn_register_backgroung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

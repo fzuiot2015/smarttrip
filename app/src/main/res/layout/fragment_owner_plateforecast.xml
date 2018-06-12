@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="main"
+        android:background="@color/colorGreen"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:title="车牌号测吉凶"
+        app:titleTextColor="@color/colorWrite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_forecast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="车牌号"
+            android:text="浙A11111"
+            android:textColor="@color/deepgray"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_forecast_start"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/selector_btn_register_backgroung"
+            android:text="开始预测"
+            android:textColor="@color/colorWrite" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/deepgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预测结果 " />
+
+        <TextView
+            android:id="@+id/tv_forecast_lsplate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_province"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_luck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_forecast_characterdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

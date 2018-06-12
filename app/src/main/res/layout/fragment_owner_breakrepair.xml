@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoAnchorPoint="0.65"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="68dp"
+    sothree:umanoParallaxOffset="1dp"
+    sothree:umanoScrollableView="@+id/recyclerView"
+    sothree:umanoShadowHeight="4dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreen"
+                android:transitionName="main"
+                app:navigationIcon="@drawable/ic_arrow_back_white"
+                app:title="故障报修"
+                app:titleTextColor="@color/colorWrite" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWrite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前地址：" />
+
+                <TextView
+                    android:id="@+id/tv_breakrepair_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:transitionName="currentpostion" />
+
+                <ImageView
+                    android:id="@+id/iv_breakrepair_agiainloc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/location_again" />
+
+                <TextView
+                    android:id="@+id/tv_breakrepair_agiainloc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="获取当前位置" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWrite"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="故障发生时间" />
+
+                <EditText
+                    android:id="@+id/et_breakrepair_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#f6f6f6"
+                    android:gravity="start"
+                    android:hint="故障发生时间"
+                    android:textColor="@color/deepgray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWrite"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="汽车车型" />
+
+                <EditText
+                    android:id="@+id/et_breakrepair_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#f6f6f6"
+                    android:gravity="start"
+                    android:hint="汽车车型"
+                    android:textColor="@color/deepgray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWrite"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="故障描述内容" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_breakrepair_car"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/upload_camera" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="详情描述" />
+
+                    <EditText
+                        android:id="@+id/et_breakrepair_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="#f6f6f6"
+                        android:gravity="start"
+                        android:hint="故障详情内容"
+                        android:textColor="@color/deepgray"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWrite"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="其它说明" />
+
+                <EditText
+                    android:id="@+id/et_breakrepair_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#f6f6f6"
+                    android:gravity="start"
+                    android:hint="其它说明详情内容"
+                    android:textColor="@color/deepgray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_breakrepair_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="提     交" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="terms of service\nThe right to use the software is owned by QinDaLiang\@1325716331@qq.com"
+                android:textColor="@color/colorGrays"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreen"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/colorWrite"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="故障报修成功" />
+
+                <TextView
+                    android:textColor="@color/colorWrite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="系统已为您推荐附近维修店" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

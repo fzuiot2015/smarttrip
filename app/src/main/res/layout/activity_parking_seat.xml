@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:title="停车场"
+        app:titleTextColor="@color/colorWrite" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="点击相应车位可进行车位预约"
+        android:textColor="#666" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="预约价格说明（可提前1小时预约），预约期间按0.5/元收费，一小时未停车自动取消"
+        android:textColor="#999"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前选择车位号为："
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/tv_parking_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无"
+            android:textColor="#666" />
+
+        <Button
+            android:id="@+id/btn_parking_order"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/shape_theme_background"
+            android:gravity="center"
+            android:text="预约" />
+
+        <Button
+            android:id="@+id/btn_parking_go"
+            android:layout_width="90dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/shape_theme_background"
+            android:gravity="center"
+            android:text="立即前往" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="5dp"
+        android:background="#666" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/btn_parking_life"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/shape_theme_background_shadow"
+                android:gravity="center"
+                android:text="福州大学生活区"
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/btn_parking_xisan"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="西三教学楼"
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/btn_parking_xujingge"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="虚静阁"
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/btn_parking_kejiyuan"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="福州大学科技园"
+                android:textColor="#666" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qin.view.ParkingSeat
+            android:id="@+id/parking_seat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.qin.view.ParkingSeat
+            android:id="@+id/parking_seat_xisan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.qin.view.ParkingSeat
+            android:id="@+id/parking_seat_xujingge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.qin.view.ParkingSeat
+            android:id="@+id/parking_seat_kejiyuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
